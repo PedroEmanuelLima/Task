@@ -25,6 +25,31 @@ const styles = StyleSheet.create({
         fontSize: 25,
         fontWeight: "bold"
     },
+
+    Tasks: {
+        width: "100%",
+        flex: 1,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginTop: 5
+    },
+
+    deleteTask: {
+        justifyContent: "center",
+        paddingLeft: 15     
+    },
+
+    DescriptionTask: {
+        width: "75%",
+        alignContent: "flex-start",
+        backgroundColor: "#f5f5f5cf",
+        padding: 12,
+        paddingHorizontal: 20,
+        borderRadius: 50,
+        marginBottom: 5,
+        marginRight: 15,
+        color: "#fff"
+    }
 });
 
 export default styles;

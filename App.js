@@ -1,4 +1,5 @@
 import React from "react";
+import {decode, encode} from 'base-64'
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -9,6 +10,11 @@ import Details from './src/pages/Details';
 const Stack = createStackNavigator();
 
 export default function App() {
+
+  if (!global.btoa) {  global.btoa = encode }
+
+  if (!global.atob) { global.atob = decode }
+
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Task">

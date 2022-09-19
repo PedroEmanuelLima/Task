@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firestore/lite';
+import { initializeFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
     apiKey: "AIzaSyD8RlLqRqjNp5bUj01VDHYV4zg7emXC19w",
@@ -11,5 +11,7 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const database = getFirestore(app);
+const database = initializeFirestore(app, {
+    experimentalForceLongPolling: true,
+});;
 export default database; 
